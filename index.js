@@ -10,5 +10,5 @@ app.listen(process.env.PORT || 3000)
 
 
 app.get('/chat' , (req , res ) => {
-    res.send("Welcome to Chatting Using SOckets NodeJS")
+    res.sendFile(path.join(__dirname, 'chat.html'))
 })

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat UI</title>
+  <style>
+    /* Add CSS styles for your chat UI here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .chat-message {
+      margin-bottom: 10px;
+    }
+
+    .chat-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Chat</h2>
+    <div id="chat-messages"></div>
+    <input id="message-input" class="chat-input" type="text" placeholder="Enter your message">
+    <button id="send-button" onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    // Add JavaScript code for sending and receiving chat messages here
+
+    function sendMessage() {
+      var messageInput = document.getElementById('message-input');
+      var message = messageInput.value.trim();
+      if (message !== '') {
+        // Send the message to the server or process it as needed
+        console.log('Message:', message);
+        messageInput.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
